@@ -7,19 +7,35 @@ on:
     - '*'
 
 jobs:
-  example-3:
-    name: Ex3 Linux
-    runs-on: 'ubuntu-latest'
+  example-2-win:
+    name: Windows Build
+    runs-on: 'windows-latest'
     steps:
-      - uses: actions/checkout@v2
       - uses: goanpeca/setup-miniconda@v1
         with:
-           activate-environment: anaconda-client-env
-           environment-file: etc/example-environment.yml
-           python-version: 3.5
-           condarc-file: etc/example-condarc.yml
-           auto-activate-base: false
-      - shell: bash -l {0}
+          miniconda-version: 'latest'
+          activate-environment: foo
+      - name: Bash
+        shell: bash -l {0}
         run: |
           conda info
           conda list
+      - name: PowerShell
+        shell: powershell
+        run: |
+          conda info
+          conda list
+      - name: PowerShell Core
+        shell: pwsh
+        run: |
+          conda info
+          conda list
+      - name: Cmd.exe
+        shell: cmd /C CALL {0}
+        run: >-
+          conda info &&
+          conda list
+      - name: Cmd.exe
+        shell: cmd /C CALL {0}
+        run: >-
+          conda-build libtiff
