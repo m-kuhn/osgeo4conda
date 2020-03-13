@@ -38,4 +38,5 @@ jobs:
       - name: Cmd.exe
         shell: cmd /C CALL {0}
         run: >-
+          conda install conda-build
           conda-build libtiff
