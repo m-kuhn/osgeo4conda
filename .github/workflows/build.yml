@@ -32,4 +32,4 @@ jobs:
       - name: Build qfield
         shell: cmd /C CALL {0}
         run: >-
-          conda-build conda-recipes/qfield
+          conda-build -c conda-forge conda-recipes/qfield
