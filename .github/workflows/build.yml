@@ -24,11 +24,6 @@ jobs:
           conda install conda-build
 
 
-      - name: Install conda-build
-        shell: cmd /C CALL {0}
-        run: >-
-          conda install -c conda-forge qgis
-
       - name: Build qfield
         shell: cmd /C CALL {0}
         run: >-
