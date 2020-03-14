@@ -1,0 +1,31 @@
+package:
+  name: qfield
+  version: 1.4.1
+
+source:
+  fn: windows-azure-pipeline.tar.bz2
+  url: https://github.com/opengisch/QField/archive/windows-azure-pipeline.tar.bz2
+  md5: fdefa00f81048661f0fbcb003e45e9ac
+
+build:
+  features:
+    - vc9     [win and py27]
+    - vc10    [win and py34]
+    - vc14    [win and py35]
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - qgis
+    - cmake
+    - ninja
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  run:
+    - qgis
+
+about:
+  home: http://qfield.og
+  license: GPL-2.0
