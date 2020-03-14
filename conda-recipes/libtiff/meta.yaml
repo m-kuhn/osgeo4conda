@@ -1,13 +1,11 @@
 package:
   name: libtiff
-  version: 4.0.6
+  version: 4.1.0
 
 source:
-  fn: tiff-4.0.6.tar.gz
-  url: ftp://ftp.remotesensing.org/pub/libtiff/tiff-4.0.6.tar.gz
-  md5: d1d2e940dea0b5ad435f21f03d96dd72
-  patches:
-    - def_snprintf.patch  [win]
+  fn: tiff-4.1.0.tar.gz
+  url: https://download.osgeo.org/libtiff/tiff-4.1.0.tar.gz
+  md5: 2165e7aba557463acc0664e71a3ed424
 
 build:
   features:
