@@ -13,9 +13,9 @@ package:
   version: 1.4.1
 
 source:
-  fn: windows-azure-pipeline.tar.gz
-  url: https://github.com/opengisch/QField/archive/windows-azure-pipeline.tar.gz
-  md5: 942162488570a643e9da7c986b3bcbe3
+  git_url: https://github.com/opengisch/qfield.git
+  git_rev: windows-azure-pipeline
+  git_depth: 1 # (Defaults to -1/not shallow)
 
 build:
   features:
