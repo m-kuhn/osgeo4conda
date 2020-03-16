@@ -13,8 +13,8 @@ package:
   version: 1.4.1
 
 source:
-  git_url: https://github.com/opengisch/qfield.git
-  git_rev: windows-azure-pipeline
+  git_url: https://github.com/opengisch/QField.git
+  git_tag: windows-azure-pipeline
   git_depth: 1 # (Defaults to -1/not shallow)
 
 build:
