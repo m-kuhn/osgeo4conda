@@ -5,7 +5,10 @@ if errorlevel 1 exit 1
 
 set BUILDCONF=Release
 
-set "CMAKE_COMPILER_PATH=%VSINSTALLDIR:\=/%/VC/bin/amd64"
+:: set "CMAKE_COMPILER_PATH=%VSINSTALLDIR:\=/%/VC/bin/amd64"
+set "CMAKE_COMPILER_PATH=%VCINSTALLDIR%"
+
+
 
 cmake -G Ninja ^
     -D CMAKE_CXX_COMPILER="%CMAKE_COMPILER_PATH%/cl.exe" ^
