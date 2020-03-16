@@ -5,6 +5,10 @@ if errorlevel 1 exit 1
 
 set BUILDCONF=Release
 
+echo %VSINSTALLDIR%
+dir "%VSINSTALLDIR%"
+dir "%VSINSTALLDIR%VC"
+
 cmake -G Ninja ^
     -D CMAKE_BUILD_TYPE=%BUILDCONF% ^
     -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
