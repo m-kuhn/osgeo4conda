@@ -22,9 +22,9 @@ jobs:
         run: >-
           conda install conda-build
 
-      - uses: ilammy/msvc-dev-cmd@v1
-        with:
-          toolset: 14.0
+      - name: Configure x64
+        if: runner.os == 'Windows'
+        run: .github\workflows\vsenv.bat -arch=x64 -host_arch=x64
 
       - name: Build qfield
         shell: cmd /C CALL {0}
