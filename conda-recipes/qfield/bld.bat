@@ -5,6 +5,8 @@ if errorlevel 1 exit 1
 
 set BUILDCONF=Release
 
+..\.github\workflows\vsenv.bat
+
 cmake -D CMAKE_BUILD_TYPE=%BUILDCONF% ^
     -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -D CMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
